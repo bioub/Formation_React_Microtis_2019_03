@@ -1,10 +1,18 @@
-import React from 'react';
-import { TodoItem } from '../TodoItem/TodoItem';
+import React, { PureComponent } from "react";
+import { TodoItem } from "../TodoItem/TodoItem";
 
-export function TodoList({items, onDeleteItem}) {
-  return (
-    <div className="TodoList">
-      {items.map((it) => <TodoItem key={it.id} item={it} onDeleteItem={onDeleteItem} />)}
-    </div>
-  );
+export class TodoList extends PureComponent {
+  // shouldComponentUpdate(nextProps) {
+  //   return this.props.items !== nextProps.items;
+  // }
+  render() {
+    const { items, onDeleteItem } = this.props;
+    return (
+      <div className="TodoList">
+        {items.map(it => (
+          <TodoItem key={it.id} item={it} onDeleteItem={onDeleteItem} />
+        ))}
+      </div>
+    );
+  }
 }

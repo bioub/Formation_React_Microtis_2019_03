@@ -1,0 +1,13 @@
+$btnColor: blueviolet;
+
+.TodoItem {
+  user-select: none;
+  margin: 0.6em 0;
+  display: flex;
+
+  button {
+    outline: 0;
+    border: 1px solid $btnColor;
+    background-color: lighten($btnColor, 30%);
+  }
+}
