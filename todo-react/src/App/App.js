@@ -36,6 +36,15 @@ class App extends Component {
       ]
     });
   };
+  handleDeleteItem = (item) => {
+    const index = this.state.todos.indexOf(item);
+    this.setState({
+      todos: [
+        ...this.state.todos.slice(0, index),
+        ...this.state.todos.slice(index + 1),
+      ],
+    });
+  }
   render() {
     return (
       <div className="App">
@@ -44,7 +53,7 @@ class App extends Component {
           onNewTodoChange={this.handleNewTodoChange}
           onNewTodoAdd={this.handleNewTodoAdd}
         />
-        <TodoList items={this.state.todos} />
+        <TodoList items={this.state.todos} onDeleteItem={this.handleDeleteItem} />
       </div>
     );
   }
