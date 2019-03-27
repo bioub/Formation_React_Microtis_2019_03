@@ -1,7 +1,7 @@
-import { connect } from "react-redux";
-import { TodoForm } from "../components/TodoForm/TodoForm";
-import { todoChange, todoAdd } from "../actions";
-import { selectTodosInput } from "../selectors";
+import { connect } from 'react-redux';
+import { TodoForm } from '../components/TodoForm/TodoForm';
+import { todoChange, todoAdd } from '../actions';
+import { selectTodosInput } from '../selectors';
 
 function mapStateToProps(state) {
   return {
@@ -12,15 +12,15 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     onNewTodoChange(inputVal) {
-      dispatch(todoChange(inputVal))
+      dispatch(todoChange(inputVal));
     },
     onNewTodoAdd(inputVal) {
       dispatch(todoAdd(inputVal));
-    }
+    },
   };
 }
 
 export const TodoFormContainer = connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(TodoForm);

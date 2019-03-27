@@ -1,13 +1,17 @@
-$btnColor: blueviolet;
-
 .TodoItem {
-  user-select: none;
   margin: 0.6em 0;
   display: flex;
+  padding: 5px;
+
+  span {
+    flex: 1;
+  }
 
   button {
-    outline: 0;
-    border: 1px solid $btnColor;
-    background-color: lighten($btnColor, 30%);
+    margin-left: 5px;
+  }
+
+  &:nth-child(odd) {
+    background-color: #fafafa;
   }
 }

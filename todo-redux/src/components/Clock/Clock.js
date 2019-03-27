@@ -26,11 +26,7 @@ class Clock extends Component {
   }
   render() {
     // dans un composant stateful on manipule les props via this.props
-    return (
-      <div className="Clock" >
-        {this.state.now.toLocaleTimeString()}
-      </div>
-    );
+    return <div className="Clock">{this.state.now.toLocaleTimeString()}</div>;
   }
 }
 

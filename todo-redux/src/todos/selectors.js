@@ -26,9 +26,4 @@ function selectTodosInput(state) {
   return selectTodos(state).input;
 }
 
-export {
-  selectTodos,
-  selectTodosItems,
-  selectTodosInput,
-  selectTodosCount,
-}
+export { selectTodos, selectTodosItems, selectTodosInput, selectTodosCount };

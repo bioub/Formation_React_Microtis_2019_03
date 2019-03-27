@@ -1,6 +1,6 @@
-import React, { PureComponent } from "react";
-import { TodoItem } from "../TodoItem/TodoItem";
-import { TodoCount } from "../TodoCount/TodoCount";
+import React, { PureComponent } from 'react';
+import { TodoItem } from '../TodoItem/TodoItem';
+import { TodoCount } from '../TodoCount/TodoCount';
 
 export class TodoList extends PureComponent {
   // shouldComponentUpdate(nextProps) {

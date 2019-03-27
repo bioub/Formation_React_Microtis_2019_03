@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^3.9.2",
+    "@material-ui/icons": "^3.0.2",
     "axios": "^0.18.0",
     "node-sass": "^4.11.0",
     "react": "^16.8.5",
@@ -18,7 +19,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "prettier": "prettier 'src/**/*' --write"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -28,5 +29,12 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "prettier": "1.16.4"
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "singleQuote": true
+  }
 }

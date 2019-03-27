@@ -1,8 +1,8 @@
-import { USER_FETCH, USER_FETCH_SUCCESS } from "./constants";
+import { USER_FETCH, USER_FETCH_SUCCESS } from './constants';
 
 const initialValue = {
   loading: false,
-  items: []
+  items: [],
 };
 
 export function usersReducer(previousState = initialValue, { type, payload }) {

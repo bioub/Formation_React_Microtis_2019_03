@@ -1,6 +1,6 @@
-import { connect } from "react-redux";
-import { TodoList } from "../components/TodoList/TodoList";
-import { selectTodosItems, selectTodosCount } from "../selectors";
+import { connect } from 'react-redux';
+import { TodoList } from '../components/TodoList/TodoList';
+import { selectTodosItems, selectTodosCount } from '../selectors';
 
 function mapStateToProps(state) {
   return {

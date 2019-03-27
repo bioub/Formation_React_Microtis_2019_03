@@ -9,3 +9,7 @@ export function selectUsersLoading(state) {
 export function selectUsersItems(state) {
   return selectUsers(state).items;
 }
+
+export function selectUsersItemsById(state, id) {
+  return selectUsersItems(state).find(items => items.id === Number(id));
+}

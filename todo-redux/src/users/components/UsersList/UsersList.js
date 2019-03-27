@@ -1,13 +1,15 @@
-import React, { Component } from "react";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemText from "@material-ui/core/ListItemText";
-import { Link } from "react-router-dom";
-import { getAll } from "../../api/users";
-import { userFetch, userFetchSuccess } from "../../actions";
+import React, { Component } from 'react';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import { Link } from 'react-router-dom';
+import { getAll } from '../../api/users';
+import { userFetch, userFetchSuccess } from '../../actions';
 
 export class UsersList extends Component {
   async componentDidMount() {
+    // redux-thunk / redux-saga / redux-promise / redux-observable
     this.props.dispatch(userFetch());
     const users = await getAll();
     this.props.dispatch(userFetchSuccess(users));
@@ -18,7 +20,7 @@ export class UsersList extends Component {
     return (
       <div className="UsersList">
         {loading ? (
-          <div>Loading...</div>
+          <CircularProgress />
         ) : (
           <List component="nav">
             {users.map(user => (
@@ -26,7 +28,7 @@ export class UsersList extends Component {
                 key={user.id}
                 button
                 component={Link}
-                to={match.path + "/" + user.id}
+                to={match.path + '/' + user.id}
               >
                 <ListItemText>{user.name}</ListItemText>
               </ListItem>

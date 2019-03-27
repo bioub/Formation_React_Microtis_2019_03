@@ -1,4 +1,4 @@
-import { USER_FETCH, USER_FETCH_SUCCESS } from "./constants";
+import { USER_FETCH, USER_FETCH_SUCCESS } from './constants';
 
 export function userFetch() {
   return {

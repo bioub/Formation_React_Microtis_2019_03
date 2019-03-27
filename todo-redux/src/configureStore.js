@@ -30,7 +30,10 @@ const rootReducer = combineReducers({
 });
 
 export function configureStore() {
-  const store = createStore(rootReducer/*, initialState*/, composeWithDevTools());
+  const store = createStore(
+    rootReducer /*, initialState*/,
+    composeWithDevTools(),
+  );
 
   return store;
 }

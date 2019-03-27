@@ -1,10 +1,9 @@
-import React from 'react'
+import React from 'react';
 
 export function UsersAdd() {
   return (
     <div className="UsersAdd">
-      
-      <h2>UsersAdd</h2>
+      <h2>Add a new user</h2>
     </div>
-  )
+  );
 }
