@@ -4,6 +4,7 @@ import { Route, Switch, Link } from "react-router-dom";
 import { UsersList } from "../UsersList/UsersList";
 import { UsersAdd } from "../UsersAdd/UsersAdd";
 import { UsersShow } from "../UsersShow/UsersShow";
+import { UserListContainer } from "../../containers/UsersListContainer";
 
 
 export function Users({ match }) {
@@ -11,11 +12,11 @@ export function Users({ match }) {
     <div className="Users">
       <h2>Users</h2>
       <Grid container>
-        <Grid item sm="4">
-          <UsersList />
+        <Grid item sm={4}>
+          <UserListContainer match={match} />
           <Link to={match.path + "/add"}>Ajouter</Link>
         </Grid>
-        <Grid item sm="8">
+        <Grid item sm={8}>
           <Switch>
             <Route path={match.path + "/add"} component={UsersAdd} />
             <Route path={match.path + "/:id"} component={UsersShow} />

@@ -1,8 +1,13 @@
 import { createStore, combineReducers } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { todosReducer } from './todos/reducers';
+import { usersReducer } from './users/reducers';
 
 // const initialState = {
+//  users: {
+//    loading: true,
+//    items: [],
+//  }
 //   newTodo: 'Achet',
 //   todos: [{
 //     id: 1,
@@ -21,6 +26,7 @@ import { todosReducer } from './todos/reducers';
 
 const rootReducer = combineReducers({
   todos: todosReducer,
+  users: usersReducer,
 });
 
 export function configureStore() {
