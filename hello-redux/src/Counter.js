@@ -1,7 +1,7 @@
-import React from 'react';
-import { connect } from 'react-redux';
+import React from "react";
+import { connect } from "react-redux";
 
-function CounterControlled({count, onIncrement}) {
+function CounterControlled({ count, onIncrement }) {
   return (
     <button className="CounterControlled" onClick={onIncrement}>
       {count}
@@ -11,20 +11,21 @@ function CounterControlled({count, onIncrement}) {
 
 function mapStateToProps(state) {
   return {
-    count: state.x,
+    count: state.x
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
     onIncrement() {
-      dispatch({type: 'COUNTER_INCREMENT'});
-    },
+      dispatch({ type: "COUNTER_INCREMENT" });
+    }
   };
 }
 
-const CounterContainer = connect(mapStateToProps, mapDispatchToProps)(CounterControlled);
+const CounterContainer = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(CounterControlled);
 
-export {
-  CounterContainer,
-};
+export { CounterContainer };

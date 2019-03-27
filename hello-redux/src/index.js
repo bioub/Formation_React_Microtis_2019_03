@@ -40,7 +40,7 @@ function prenomReducer(previousState = "", { type, payload }) {
 
 const rootReducer = combineReducers({
   x: counterReducer,
-  prenom: prenomReducer
+  prenom: prenomReducer,
 });
 
 const store = createStore(rootReducer, composeWithDevTools());
